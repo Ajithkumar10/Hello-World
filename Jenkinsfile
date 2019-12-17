@@ -1,4 +1,4 @@
-pipeline ('redhat')
+pipeline
 {
     stages {
         stage('Build') {
