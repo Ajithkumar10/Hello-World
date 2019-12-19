@@ -1,15 +1,24 @@
-@Library('jenkins-library@master') _
- 
-pipeline {
+pipeline
+{
     agent any
     stages {
-        stage('Git Checkout') {
+        stage('Build') {
             steps {
-            gitCheckout(
-                branch: "master",
-                url: "https://github.com/Ajithkumar10/Hello-World.git"
-            )
+                echo 'Building..'
+               
             }
-    }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+                
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                
+            }
+        }
     }
 }
